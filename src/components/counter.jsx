@@ -6,9 +6,12 @@ const Counter = (props) => {
   const formatValue = () => {
     return value == 0 ? "empty" : value;
   };
+  
   const getBadgeClasses = () => {
-    let classes = "badge m-2 ";
+    let classes = "badge m-2 "; // как тебе такая идея let classes = `badge m-2 ${value > 0 ? 'bg-primary' : 'bg-warning'}`;
+    
     classes += value === 0 ? "bg-warning" : "bg-primary";
+    
     return classes;
   };
 
